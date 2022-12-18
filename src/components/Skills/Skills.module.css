@@ -1,0 +1,10 @@
+.bg {
+  background-image: url("../../assets/skills-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* background-position: center; */
+  background-attachment: fixed;
+
+  /* height: 100vw; */
+  /* width: 100vw; */
+}

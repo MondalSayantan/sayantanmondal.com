@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import * as styles from "./Navbar.module.css";
-import {
-  AiOutlineMenu,
-  AiFillGithub,
-  AiFillLinkedin,
-  AiOutlineTwitter,
-} from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
 import { CgClose } from "react-icons/cg";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 
@@ -37,33 +32,11 @@ function Navbar() {
   const [open, cycleOpen] = useCycle(false, true);
 
   const links = [
-    { name: "Home", link: "/", id: 1 },
-    { name: "Skills", link: "#skills", id: 2 },
-    { name: "Projects", link: "#projects", id: 3 },
-    { name: "Resume", link: "/resume", id: 4 },
-    { name: "Contact", link: "/contact", id: 6 },
-    { name: "Blog", link: "/blog", id: 5 },
-  ];
-
-  const socials = [
-    {
-      name: "Github",
-      link: "https://github.com/MondalSayantan",
-      id: "github",
-      icon: <AiFillGithub className="text-2xl ml-5" />,
-    },
-    {
-      name: "Linkedin",
-      link: "https://www.linkedin.com/in/mondalsayantan/",
-      id: "linkedin",
-      icon: <AiFillLinkedin className="text-2xl" />,
-    },
-    {
-      name: "Twitter",
-      link: "https://twitter.com/sayantannnnn",
-      id: "twitter",
-      icon: <AiOutlineTwitter className="text-2xl" />,
-    },
+    { name: "home", link: "/", id: 1 },
+    { name: "about me", link: "#about", id: 2 },
+    { name: "projects", link: "#projects", id: 3 },
+    { name: "contact", link: "/contact", id: 6 },
+    { name: "resume", link: "/resume", id: 4 },
   ];
 
   // detect whether user has scrolled the page down by 10px
@@ -150,16 +123,22 @@ function Navbar() {
             <ul className="lg:flex flex-grow justify-end flex-wrap items-center hidden">
               {links.map(({ name, link, id }) => (
                 <li key={id} className="mx-7">
-                  <Link to={link}>{name}</Link>
+                  <Link to={link} className="scroll-smooth">
+                    {name}
+                  </Link>
                 </li>
               ))}
-              {socials.map(({ name, link, id, icon }) => (
-                <li key={id} className="mx-2">
-                  <a href={link} target="_blank">
-                    {icon}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a
+                  href="https://blog.sayantanmondal.com/"
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
+                  <button className="bg-blue-700 hover:bg-blue-900 text-white py-1 px-2 rounded-lg ml-2">
+                    blog
+                  </button>
+                </a>
+              </li>
             </ul>
             <div className="lg:hidden flex items-center flex-grow justify-end">
               {/* <AiOutlineMenu className="text-2xl" onClick={cycleOpen} /> */}
