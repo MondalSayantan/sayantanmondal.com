@@ -10,11 +10,11 @@ const Skills = () => {
       <div className=" flex py-10 w-full justify-around">
         <div class="flex flex-col items-center lg:bg-white bg-purple-50 border lg:rounded-lg lg:shadow-md md:flex-row m-5 max-w-7xl hover:shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
           {/* small card on the left side */}
-          <StaticImage
+          {/* <StaticImage
             class="object-cover w-full rounded-t-lg h-100 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg grow"
             src="../assets/skills.jpg"
             alt=""
-          />
+          /> */}
           <div class="flex flex-col justify-between p-4 leading-normal">
             <div className="flex items-center">
               <h2 class="mb-2 lg:text-4xl py-1 m-0 font-bold tracking-tight text-gray-900 md:text-3xl">
