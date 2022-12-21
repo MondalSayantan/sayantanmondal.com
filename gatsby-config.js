@@ -6,13 +6,6 @@ const config = require("./config/website");
 
 module.exports = {
   siteMetadata: {
-    // title: config.siteTitle,
-    // description: config.siteDescription,
-    // twitter: config.twitter,
-    // siteUrl: config.siteUrl,
-    // siteLogo: config.siteLogo,
-    // siteBanner: config.siteBanner,
-
     title: "Sayantan Mondal - Full-Stack Developer",
     description:
       "I'm Sayantan Mondal, a Full-Stack Developer from India. I'm passionate about building awesome web apps and learning new technologies.",
