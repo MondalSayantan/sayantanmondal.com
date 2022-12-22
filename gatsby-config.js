@@ -28,5 +28,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-plugin-sentry",
+      options: {
+        dsn: "https://02c20b59426044a1a403512ef3c54488@o4504265515991040.ingest.sentry.io/4504371993051136",
+        sampleRate: 0.7,
+      },
+    },
   ],
 };
