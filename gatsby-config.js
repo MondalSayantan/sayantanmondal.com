@@ -9,7 +9,7 @@ module.exports = {
     title: config.siteTitle,
     description: config.siteDescription,
     twitterUsername: config.twitter,
-    image: `/fav.png`,
+    image: `/logo.png`,
     siteUrl: config.siteUrl,
   },
   plugins: [

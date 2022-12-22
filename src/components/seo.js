@@ -18,6 +18,8 @@ export const SEO = ({ title, description, pathname, children }) => {
     twitterUsername,
   };
 
+  console.log(seo);
+
   return (
     <>
       <title>{seo.title}</title>
@@ -31,8 +33,8 @@ export const SEO = ({ title, description, pathname, children }) => {
       <meta name="twitter:creator" content={seo.twitterUsername} />
       <link
         rel="icon"
-        // href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>👤</text></svg>"
-        href={seo.image}
+        type="image/png"
+        href="https://www.sayantanmondal.com/logo.png"
       />
       {children}
     </>
