@@ -6,13 +6,11 @@ const config = require("./config/website");
 
 module.exports = {
   siteMetadata: {
-    title: "Sayantan Mondal - Full-Stack Developer",
-    description:
-      "I'm Sayantan Mondal, a Full-Stack Developer from India. I'm passionate about building awesome web apps and learning new technologies.",
-    twitter: "@sayantannnnn",
-    siteUrl: "https://www.sayantanmondal.com",
-    siteLogo: `src/assets/logo.png`,
-    siteBanner: `src/assets/logo.png`,
+    title: config.siteTitle,
+    description: config.siteDescription,
+    twitterUsername: config.twitter,
+    image: `/fav.png`,
+    siteUrl: config.siteUrl,
   },
   plugins: [
     "gatsby-plugin-postcss",
@@ -29,5 +27,6 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-react-helmet`,
   ],
 };

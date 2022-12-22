@@ -1,6 +1,6 @@
 const meta = {
   // Metadata
-  siteTitle: "Sayantan Mondal - Full-Stack Developer",
+  siteTitle: "Sayantan Mondal - Software Developer",
   siteDescription:
     "I'm Sayantan Mondal, a Full-Stack Developer from India. I'm passionate about building awesome web apps and learning new technologies.",
   siteTitleAlt: "Sayantan Mondal",
@@ -9,8 +9,8 @@ const meta = {
 };
 
 const social = {
-  siteLogo: `src/assets/logo.png`,
-  siteBanner: `src/assets/logo.png`,
+  siteLogo: "../src/assets/logo.png",
+  siteBanner: `../src/assets/logo.png`,
   twitter: "@sayantannnnn",
 };
 
