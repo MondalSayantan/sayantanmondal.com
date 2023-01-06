@@ -130,7 +130,7 @@ function Navbar() {
               ))}
               <li>
                 <a
-                  href="https://blog.sayantanmondal.com/"
+                  href="https://devcentral.club/"
                   target={"_blank"}
                   rel="noreferrer"
                 >
