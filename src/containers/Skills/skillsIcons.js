@@ -91,7 +91,7 @@ const SkillsIcons = () => {
     <div className="flex flex-wrap justify-around items-center">
       {icons.map((icon) => (
         <div className="m-4 bg-white lg:mx-10 md:mx-8 p-5 justify-around items-center rounded-full inline-block relative">
-          <button class="inline-block relative">
+          <button class="relative flex justify-center items-center">
             {icon.icon}
             {/* {icon.span} */}
           </button>

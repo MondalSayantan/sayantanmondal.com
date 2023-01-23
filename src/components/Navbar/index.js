@@ -34,7 +34,8 @@ function Navbar() {
   const links = [
     { name: "home", link: "/", id: 1 },
     { name: "about me", link: "#about", id: 2 },
-    { name: "projects", link: "#projects", id: 3 },
+    { name: "projects", link: "#work", id: 3 },
+    { name: "work experience", link: "#experience", id: 5 },
     { name: "contact", link: "/contact", id: 6 },
     { name: "resume", link: "/resume", id: 4 },
   ];

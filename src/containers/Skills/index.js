@@ -6,9 +6,12 @@ import * as styles from "./Skills.module.css";
 
 const Skills = () => {
   return (
-    <div className={`${styles.bg} flex flex-col`} id="about">
-      <div className=" flex py-10 w-full justify-around">
-        <div class="flex flex-col items-center lg:bg-white bg-purple-50 border lg:rounded-lg lg:shadow-md md:flex-row m-5 max-w-7xl hover:shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+    <div
+      className={`${styles.bg} flex flex-col h-screen w-screen shadow-md md:flex-row  hover:shadow-xl transition duration-500 `}
+      id="about"
+    >
+      <div className=" flex p-10 w-full justify-around">
+        <div class="flex flex-col items-center lg:bg-white bg-purple-50 border lg:rounded-lg lg:shadow-md md:flex-row m-5 max-w-1xl hover:shadow-xl transition duration-500 ease-in-out ">
           {/* small card on the left side */}
           {/* <StaticImage
             class="object-cover w-full rounded-t-lg h-100 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg grow"
@@ -38,7 +41,7 @@ const Skills = () => {
                   cursor={true}
                   repeat={Infinity}
                   style={{
-                    fontSize: "2.3rem",
+                    fontSize: "2rem",
                     color: "#D946EF",
                     fontWeight: "bold",
                     marginLeft: "0.5rem",
@@ -88,7 +91,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto flex justify-center items-center">
         <SkillsIcons />
       </div>
     </div>

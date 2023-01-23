@@ -1,7 +1,7 @@
 import React from "react";
 import * as styles from "./Header.module.css";
 import { StaticImage } from "gatsby-plugin-image";
-import wave from "../assets/waving-hand.gif";
+import wave from "../../assets/waving-hand.gif";
 import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from "react-icons/ai";
 
 const socials = [

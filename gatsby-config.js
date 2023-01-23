@@ -15,6 +15,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
+    `gatsby-plugin-sass`,
     "gatsby-plugin-sharp",
     {
       resolve: `gatsby-plugin-google-gtag`,
