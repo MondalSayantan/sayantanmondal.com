@@ -13,7 +13,7 @@ app.use(express.json());
 const router = express.Router();
 
 router.post("/", (req, res) => {
-  const { emailVal, messageVal, token } = req.apiGateway.event.body;
+  const { emailVal, messageVal, token } = req.body;
   // console.log(req.apiGateway.event.body.token);
   console.log(req.body);
   const secretKey = process.env.RECAPTCHA_SECRETKEY;
