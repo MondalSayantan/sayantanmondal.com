@@ -18,7 +18,6 @@ router.post("/", (req, res) => {
   const messageVal = req.body.message;
   const token = req.body.token;
   const secretKey = process.env.RECAPTCHA_SECRETKEY;
-  // const secretKey = "6Lcb0SEkAAAAAJvcavviM9Uyq4i0OrzIJuqHNdEG";
   const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`;
 
   if (!token) {
@@ -39,6 +38,7 @@ router.post("/", (req, res) => {
     if (!success || score < 0.4) {
       return res.json({
         msg: "Sending failed. Robots aren't allowed here.",
+        verificationUrl,
         score: score,
       });
     }
