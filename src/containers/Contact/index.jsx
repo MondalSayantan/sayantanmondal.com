@@ -25,7 +25,7 @@ const Contact = () => {
       email,
       subject,
       message,
-      token,
+      result,
     };
     axios
       .post("https://www.sayantanmondal.com/.netlify/functions/sendEmail", data)
