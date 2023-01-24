@@ -18,6 +18,7 @@ const Contact = () => {
   const [token, setToken] = useState("");
 
   const handleSubmit = async (e) => {
+    e.preventDefault();
     const result = await executeRecaptcha("homepage");
     setToken(result);
     const data = {
@@ -26,9 +27,11 @@ const Contact = () => {
       message,
       token,
     };
-    axios.post("http://localhost:5000/submit", data).then(() => {
-      console.log("Message Sent");
-    });
+    axios
+      .post("https://www.sayantanmondal.com/.netlify/functions/sendEmail", data)
+      .then(() => {
+        console.log("Message Sent");
+      });
   };
 
   return (

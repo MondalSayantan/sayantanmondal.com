@@ -34,7 +34,7 @@ router.post("/", (req, res) => {
       });
     }
     // When no problems occur, "send" the form
-    console.log("Congrats you sent the form");
+    res.status(200).send({ emailVal, messageVal, token });
   });
 });
 
