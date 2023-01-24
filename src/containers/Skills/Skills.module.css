@@ -1,9 +1,9 @@
 .bg {
-  /* background-image: url("../../assets/skills-bg-2.jpg"); */
-  background-image: url("../../assets/background.png");
+  background-image: url("../../assets/skills-bg-2.jpg");
+  /* background-image: url("../../assets/background.jpg"); */
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  /* background-position: center; */
+  background-position: center;
   background-attachment: fixed;
 
   /* height: 100vw; */

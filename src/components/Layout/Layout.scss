@@ -47,7 +47,8 @@ body::-webkit-scrollbar-thumb {
 // }
 
 .app__primarybg {
-  background-color: var(--primary-color);
+  // background-color: var(--primary-color);
+  background-color: rgb(71, 69, 69);
   // position: relative;
   // background: linear-gradient(135deg, white 50%, purple 50%);
   // height: 100%;
@@ -59,7 +60,8 @@ body::-webkit-scrollbar-thumb {
 
 .bg-skew {
   // position: relative;
-  background: linear-gradient(155deg, #350d90 50%, white 50%);
+
+  background: linear-gradient(155deg, #5959df 50%, rgb(71, 69, 69) 50%);
   // height: 100vh;
   // width: 100vh;
   display: flex;
@@ -73,6 +75,16 @@ body::-webkit-scrollbar-thumb {
   top: 0;
   left: 0;
   margin: auto;
+}
+
+.bg-about {
+  position: relative;
+  background: linear-gradient(155deg, #350d90 50%, rgb(71, 69, 69) 50%);
+  // height: 100vh;
+  // width: 100vh;
+  display: flex;
+  align-items: center;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 .app__container {
