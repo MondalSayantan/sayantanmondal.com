@@ -1,7 +1,7 @@
 import React from "react";
 import "./Layout.scss";
 import Navbar from "../Navbar";
-import { Header, Skills, Timeline, Projects } from "../../containers";
+import { Header, Skills, Timeline, Projects, Contact } from "../../containers";
 import Carousel from "../Carousel";
 
 const Layout = ({ children }) => {
@@ -12,6 +12,7 @@ const Layout = ({ children }) => {
       <Skills />
       <Projects />
       <Timeline />
+      <Contact />
       {/* <Carousel /> */}
     </div>
   );

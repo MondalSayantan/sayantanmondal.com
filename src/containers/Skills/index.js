@@ -3,6 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 import { StaticImage } from "gatsby-plugin-image";
 import SkillsIcons from "./skillsIcons";
 import * as styles from "./Skills.module.css";
+import { AppWrap, MotionWrap } from "../../wrapper";
 
 const Skills = () => {
   return (
@@ -19,8 +20,8 @@ const Skills = () => {
             alt=""
           /> */}
           <div class="flex flex-col justify-between p-4 leading-normal">
-            <div className="flex items-center">
-              <h2 class="mb-2 lg:text-4xl py-1 m-0 font-bold tracking-tight text-gray-900 md:text-3xl">
+            <div className="flex items-center flex-col md:flex-row">
+              <h2 class="md:mb-2 lg:text-3xl py-1 m-0 font-bold tracking-tight text-gray-900 md:text-3xl text-1xl">
                 I love
               </h2>
               <div className="hidden lg:block">
@@ -41,7 +42,7 @@ const Skills = () => {
                   cursor={true}
                   repeat={Infinity}
                   style={{
-                    fontSize: "2rem",
+                    fontSize: "1.7rem",
                     color: "#D946EF",
                     fontWeight: "bold",
                     marginLeft: "0.5rem",
@@ -77,8 +78,35 @@ const Skills = () => {
                   }}
                 />
               </div>
+              <div className="block md:hidden lg:hidden">
+                <TypeAnimation
+                  sequence={[
+                    "JavaScript", // Types 'One'
+                    2000,
+                    "developing interactive interfaces", // Types 'One'
+                    2000, // Waits 1s
+                    "designing APIs", // Types 'One'
+                    2000, // Waits 1s
+                    "building full stack applications", // Types 'One'
+                    2000, // Waits 1s
+                    "algorithms", // Types 'One'
+                    2000, // Waits 1s
+                  ]}
+                  wrapper="h2"
+                  cursor={true}
+                  repeat={Infinity}
+                  style={{
+                    fontSize: "0.9rem",
+                    color: "#D946EF",
+                    fontWeight: "bold",
+                    marginLeft: "0.5rem",
+                    marginBottom: "0.25em",
+                    marginTop: "0",
+                  }}
+                />
+              </div>
             </div>
-            <p class="mb-3 lg:font-normal text-gray-900 max-w-3xl md:text-1xl">
+            <p class="mb-3 lg:font-normal text-gray-900 max-w-3xl md:text-1xl text-sm text-justify">
               I have a deep love for frontend and backend development, and I am
               particularly skilled in using JavaScript to create fully
               functional websites. I have completed a variety of projects for my
@@ -98,4 +126,5 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+// export default Skills;
+export default AppWrap(MotionWrap(Skills, "app__works"), "about", "bg-blue");

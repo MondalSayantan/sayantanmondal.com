@@ -9,6 +9,7 @@ const projects = [
     tags: ["Personal Portfolio Projects"],
     technologies: "HTML, CSS, JavaScript",
     image: images.qtrip,
+    projectLink: "https://qtrip-project-sayantan.netlify.app/",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const projects = [
     tags: ["Personal Portfolio Projects"],
     technologies: "HTML, CSS, JavaScript",
     image: images.xboard,
+    projectLink: "https://newsfeed-project.netlify.app/",
   },
   {
     id: 3,
@@ -27,15 +29,17 @@ const projects = [
     tags: ["Personal Portfolio Projects"],
     technologies: "React, Node.Js, Express, MongoDB",
     image: images.qkart,
+    projectLink: "https://qkart-sayantan-v2.netlify.app/",
   },
   {
     id: 4,
     title: "XFlix",
     description:
-      "XFlix is a video sharing platform which hosts videos for the world to watch. It also features uploading new videos by using external video links (eg: Youtube) and playing these videos.",
+      "XFlix is a video sharing platform which hosts videos for the world to watch. It features uploading new videos by using external video links.",
     tags: ["Personal Portfolio Projects"],
     technologies: "React, Node.Js, Express, MongoDB",
     image: images.xflix,
+    projectLink: "https://xflix-sayantan-v2.netlify.app/",
   },
   {
     id: 5,
@@ -45,6 +49,7 @@ const projects = [
     tags: ["Hackathon Winning Projects"],
     technologies: "WildHacks II Prize Winner",
     image: images.cuddles,
+    projectLink: "https://devpost.com/software/cuddles",
   },
   {
     id: 6,
@@ -54,6 +59,7 @@ const projects = [
     tags: ["Hackathon Winning Projects"],
     technologies: "Snakes and Hackers 2 Prize Winner",
     image: images.stakes,
+    projectLink: "https://devpost.com/software/tic-tac-get",
   },
   {
     id: 7,
@@ -63,6 +69,7 @@ const projects = [
     tags: ["Hackathon Winning Projects"],
     technologies: "Hack and Snack Prize Winner",
     image: images.foodrelevel,
+    projectLink: "https://devpost.com/software/food-relevel",
   },
   {
     id: 8,
@@ -72,6 +79,7 @@ const projects = [
     tags: ["Hackathon Winning Projects"],
     technologies: "Hack JKLU Prize Winner",
     image: images.eventrush,
+    projectLink: "https://devfolio.co/projects/event-rush-aefc",
   },
   {
     id: 9,
@@ -80,7 +88,9 @@ const projects = [
       "A web portal for increasing the efficiency and transparency internally of the DAK system in Government of Rajasthan (Jaipur Collectorate). Successfully implemented in the Jaipur Collectorate after rigorous testing.",
     tags: ["Real World Applications"],
     technologies: "Government of Rajasthan",
-    images: images.dak,
+    image: images.dak,
+    projectLink:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7006898222082207744/",
   },
   {
     id: 10,
@@ -89,7 +99,9 @@ const projects = [
       "A web portal to register graduates for the convocation ceremony. The portal provides a platform for the graduates to upload their documents, pay the convocation fee online and clear their dues. Used by over 2000 graduates",
     tags: ["Real World Applications"],
     technologies: "Manipal University Jaipur",
-    images: images.convocation,
+    image: images.convocation,
+    projectLink:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7004687360231632896/",
   },
 ];
 

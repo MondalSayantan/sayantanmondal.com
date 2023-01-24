@@ -8,17 +8,13 @@ import projects from "../../constants/db";
 const Work = () => {
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
-  const [activeFilter, setActiveFilter] = useState(
-    "Personal Portfolio Projects"
-  );
+  const [activeFilter, setActiveFilter] = useState("Real World Applications");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
     setWorks(projects);
     setFilterWork(
-      projects.filter((work) =>
-        work.tags.includes("Personal Portfolio Projects")
-      )
+      projects.filter((work) => work.tags.includes("Real World Applications"))
     );
   }, []);
 
@@ -90,7 +86,7 @@ const Work = () => {
                     <AiFillEye />
                   </motion.div>
                 </a>
-                <a href={work.codeLink} target="_blank" rel="noreferrer">
+                {/* <a href={work.codeLink} target="_blank" rel="noreferrer">
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.9] }}
@@ -99,7 +95,7 @@ const Work = () => {
                   >
                     <AiFillGithub />
                   </motion.div>
-                </a>
+                </a> */}
               </motion.div>
             </div>
 

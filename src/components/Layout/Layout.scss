@@ -77,6 +77,15 @@ body::-webkit-scrollbar-thumb {
   margin: auto;
 }
 
+.bg-blue {
+  // background-color: #5959df;
+  background-image: url("../../assets/skills-bg-2.jpg");
+  /* background-image: url("../../assets/background.jpg"); */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: fixed;
+}
+
 .bg-about {
   position: relative;
   background: linear-gradient(155deg, #350d90 50%, rgb(71, 69, 69) 50%);

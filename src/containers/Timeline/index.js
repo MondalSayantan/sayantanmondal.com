@@ -43,7 +43,7 @@ const Timeline = () => {
           </div>
           <div className="ml-0 md:ml-12 lg:w-2/3 sticky">
             <div className="container mx-auto w-full h-full">
-              <div className="relative wrap overflow-hidden p-10 h-full">
+              <div className="relative wrap overflow-hidden md:p-10 h-full text-justify p-1">
                 <div
                   className="border-2-2 border-yellow-555 absolute h-full border"
                   style={rightStyle}

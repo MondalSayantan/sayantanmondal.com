@@ -8,77 +8,77 @@ import { SiMongodb, SiGatsby, SiTypescript } from "react-icons/si";
 
 const icons = [
   {
-    icon: <AiFillHtml5 className="text-5xl text-orange-700" />,
+    icon: <AiFillHtml5 className="md:text-5xl text-3xl text-orange-700" />,
     span: (
       <span class="animate-ping absolute top-1 right-0.5 block h-2 w-2 rounded-full bg-blue-800" />
     ),
     name: "HTML5",
   },
   {
-    icon: <IoLogoCss3 className="text-5xl text-blue-700" />,
+    icon: <IoLogoCss3 className="md:text-5xl text-3xl text-blue-700" />,
     span: (
       <span class="animate-ping absolute top-1 right-0.5 block h-2 w-2 rounded-full bg-blue-800" />
     ),
     name: "CSS3",
   },
   {
-    icon: <DiJavascript1 className="text-5xl text-yellow-500" />,
+    icon: <DiJavascript1 className="md:text-5xl text-3xl text-yellow-500" />,
     span: (
       <span class="animate-ping absolute top-1 right-0.5 block h-2 w-2 rounded-full bg-blue-800" />
     ),
     name: "JavaScript",
   },
   {
-    icon: <FaBootstrap className="text-5xl text-purple-600" />,
+    icon: <FaBootstrap className="md:text-5xl text-3xl text-purple-600" />,
     span: (
       <span class="animate-ping absolute top-1 right-0.5 block h-2 w-2 rounded-full bg-blue-800" />
     ),
     name: "Bootstrap",
   },
   {
-    icon: <TbBrandTailwind className="text-5xl text-blue-400" />,
+    icon: <TbBrandTailwind className="md:text-5xl text-3xl text-blue-400" />,
     span: (
       <span class="animate-ping absolute top-1 right-0.5 block h-2 w-2 rounded-full bg-blue-800" />
     ),
     name: "Tailwind",
   },
   {
-    icon: <SiTypescript className="text-5xl text-blue-500" />,
+    icon: <SiTypescript className="md:text-5xl text-3xl text-blue-500" />,
     span: (
       <span class="animate-ping absolute top-1 right-0.5 block h-2 w-2 rounded-full bg-blue-800" />
     ),
     name: "TypeScript",
   },
   {
-    icon: <DiReact className="text-5xl text-blue-600" />,
+    icon: <DiReact className="md:text-5xl text-3xl text-blue-600" />,
     span: (
       <span class="animate-ping absolute top-1 right-0.5 block h-2 w-2 rounded-full bg-red-800" />
     ),
     name: "React",
   },
   {
-    icon: <FaNodeJs className="text-5xl text-green-700" />,
+    icon: <FaNodeJs className="md:text-5xl text-3xl text-green-700" />,
     span: (
       <span class="animate-ping absolute top-1 right-0.5 block h-2 w-2 rounded-full bg-blue-800" />
     ),
     name: "Node",
   },
   {
-    icon: <SiMongodb className="text-5xl text-green-800" />,
+    icon: <SiMongodb className="md:text-5xl text-3xl text-green-800" />,
     span: (
       <span class="animate-ping absolute top-1 right-0.5 block h-2 w-2 rounded-full bg-blue-800" />
     ),
     name: "MongoDB",
   },
   {
-    icon: <SiGatsby className="text-5xl text-purple-800" />,
+    icon: <SiGatsby className="md:text-5xl text-3xl text-purple-800" />,
     span: (
       <span class="animate-ping absolute top-1 right-0.5 block h-2 w-2 rounded-full bg-blue-800" />
     ),
     name: "Gatsby",
   },
   //   {
-  //     icon: <TbBrandNextjs className="text-5xl" />,
+  //     icon: <TbBrandNextjs className="md:text-5xl text-3xl" />,
   //     span: (
   //       <span class="animate-ping absolute top-1 right-0.5 block h-2 w-2 rounded-full ring-2 ring-green-400 bg-blue-800" />
   //     ),
@@ -90,7 +90,7 @@ const SkillsIcons = () => {
   return (
     <div className="flex flex-wrap justify-around items-center">
       {icons.map((icon) => (
-        <div className="m-4 bg-white lg:mx-10 md:mx-8 p-5 justify-around items-center rounded-full inline-block relative">
+        <div className="md:m-4 m-3 bg-white lg:mx-10 md:mx-8 md:p-5 p-2 justify-around items-center rounded-full inline-block relative">
           <button class="relative flex justify-center items-center">
             {icon.icon}
             {/* {icon.span} */}
