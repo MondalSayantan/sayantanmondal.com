@@ -28,7 +28,7 @@ const Contact = () => {
       token: result,
     };
     axios
-      .post("http://localhost:57870/.netlify/functions/sendEmail", data)
+      .post("https://www.sayantanmondal.com/.netlify/functions/sendEmail", data)
       .then(() => {
         console.log("Message Sent");
       });
