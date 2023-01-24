@@ -43,7 +43,7 @@ router.post("/", (req, res) => {
       });
     }
     // When no problems occur, "send" the form
-    res.status(200).send({ emailVal, messageVal, token, secretKey });
+    res.status(200).send({ emailVal, messageVal });
     // res.status(200).send();
   });
 });
