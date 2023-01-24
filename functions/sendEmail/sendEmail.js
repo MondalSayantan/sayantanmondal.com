@@ -10,7 +10,7 @@ const router = express.Router();
 router.post("/", (req, res) => {
   const { emailVal, messageVal, token } = req.body;
   console.log(token);
-  const secretKey = "6Lcb0SEkAAAAAJvcavviM9Uyq4i0OrzIJuqHNdEG";
+  const secretKey = process.env.RECAPTCHA_SECRETKEY;
   const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`;
 
   if (!token) {
