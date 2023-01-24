@@ -2,16 +2,20 @@ const nodemailer = require("nodemailer");
 const express = require("express");
 const serverless = require("serverless-http");
 const cors = require("cors");
+const bodyParser = require("body-parser");
 
 const app = express();
 app.use(cors());
 app.options("*", cors());
+app.use(express.json());
+// app.use(bodyParser);
 
 const router = express.Router();
 
 router.post("/", (req, res) => {
-  const { emailVal, messageVal, token } = req.body;
-  console.log(token);
+  const { emailVal, messageVal, token } = req.apiGateway.event.body;
+  // console.log(req.apiGateway.event.body.token);
+  console.log(req.body);
   const secretKey = process.env.RECAPTCHA_SECRETKEY;
   const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`;
 
