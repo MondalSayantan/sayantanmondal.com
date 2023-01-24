@@ -8,12 +8,18 @@ import projects from "../../constants/db";
 const Work = () => {
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState(
+    "Personal Portfolio Projects"
+  );
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
     setWorks(projects);
-    setFilterWork(projects);
+    setFilterWork(
+      projects.filter((work) =>
+        work.tags.includes("Personal Portfolio Projects")
+      )
+    );
   }, []);
 
   const handleWorkFilter = (item) => {
@@ -32,7 +38,7 @@ const Work = () => {
   };
 
   return (
-    <>
+    <div className="w-screen flex justify-center items-center flex-col h-full">
       <h2 className="head-text" id="work">
         My Portfolio
       </h2>
@@ -42,7 +48,6 @@ const Work = () => {
           "Real World Applications",
           "Hackathon Winning Projects",
           "Personal Portfolio Projects",
-          "All",
         ].map((item, index) => (
           <div
             key={index}
@@ -105,18 +110,15 @@ const Work = () => {
               </p>
 
               <div className="app__work-tag app__flex">
-                <p className="p-text">{work.tags[0]}</p>
+                <p className="p-text">{work.technologies}</p>
               </div>
             </div>
           </div>
         ))}
       </motion.div>
-    </>
+    </div>
   );
 };
 
-export default AppWrap(
-  MotionWrap(Work, "app__works"),
-  "work",
-  "app__primarybg"
-);
+export default AppWrap(MotionWrap(Work, "app__works"), "work", "bg-skew");
+// export default Work;

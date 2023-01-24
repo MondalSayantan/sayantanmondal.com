@@ -32,7 +32,7 @@ const Header = () => {
         <div className="flex flex-col w-3/4 lg:w-1/2">
           <div className="flex items-center justify-center lg:justify-start lg:items-end">
             <h1 className=" text-3xl font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-5xl ">
-              Hello
+              <pre>&lt;Hello /&gt;</pre>
             </h1>
             <img src={wave} alt="gif" className="h-10 md:h-16 ml-1 lg:ml-5 " />
           </div>
