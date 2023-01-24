@@ -1,43 +1,43 @@
 const nodemailer = require("nodemailer");
+const express = require("express");
+const serverless = require("serverless-http");
 
-exports.handler = async function () {
-  //   console.log(event.queryStringParameters);
-  //   const userName = event.queryStringParameters.userName;
-  //   const userEmail = event.queryStringParameters.userEmail;
-  //   // Generate test SMTP service account from ethereal.email
-  //   // Only needed if you don't have a real mail account for testing
-  //   let testAccount = await nodemailer.createTestAccount();
-  //   console.log(testAccount);
-  //   // create reusable transporter object using the default SMTP transport
-  //   let transporter = nodemailer.createTransport({
-  //     host: "smtp.ethereal.email",
-  //     port: 587,
-  //     secure: false, // true for 465, false for other ports
-  //     auth: {
-  //       user: testAccount.user, // generated ethereal user
-  //       pass: testAccount.pass, // generated ethereal password
-  //     },
-  //   });
+const app = express();
 
-  //   // send mail with defined transport object
-  //   let info = await transporter.sendMail({
-  //     from: '"Thomas Weibenfalk" <thomas@example.com>', // sender address
-  //     to: "coooool@example.com, evencooooler@example.com", // list of receivers
-  //     subject: "New user registered!", // Subject line
-  //     text: `Name registered: ${userName}, email registered: ${userEmail}`, // plain text body
-  //     html: `<b>New user registered!<br/><br/>Name registered: ${userName}, email registered: ${userEmail}</b>`, // html body
-  //   });
+const router = express.Router();
 
-  //   console.log("Message sent: %s", info.messageId);
-  //   // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+router.post("/", (req, res) => {
+  const { emailVal, messageVal, token } = req.body;
+  console.log(token);
+  const secretKey = "6Lcb0SEkAAAAAJvcavviM9Uyq4i0OrzIJuqHNdEG";
+  const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`;
 
-  //   return {
-  //     statusCode: 200,
-  //     body: JSON.stringify({ previewURL: nodemailer.getTestMessageUrl(info) }),
-  //   };
+  if (!token) {
+    return res.json({
+      msg: "There was a problem with your request. Please try again later.",
+    });
+  }
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ previewURL: "https://example.com" }),
-  };
-};
+  request(verificationUrl, (err, response, body) => {
+    // Stop process for any errors
+    if (err) {
+      return res.json({ msg: "Unable to process request." });
+    }
+    // Destructure body object
+    // Check the reCAPTCHA v3 documentation for more information
+    const { success, score } = JSON.parse(body);
+    // reCAPTCHA validation
+    if (!success || score < 0.4) {
+      return res.json({
+        msg: "Sending failed. Robots aren't allowed here.",
+        score: score,
+      });
+    }
+    // When no problems occur, "send" the form
+    console.log("Congrats you sent the form");
+  });
+});
+
+app.use("/.netlify/functions/sendEmail", router);
+
+module.exports.handler = serverless(app);

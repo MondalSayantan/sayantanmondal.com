@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import "./Contact.scss";
 import axios from "axios";
 
 const Contact = () => {
+  const style = {
+    display: "none",
+  };
+
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [name, setName] = useState("");
 
   const { executeRecaptcha } = useGoogleReCaptcha();
   const [token, setToken] = useState("");
@@ -49,6 +55,22 @@ const Contact = () => {
                 className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                 placeholder="name@abc.com"
                 onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div style={style}>
+              <label
+                for="name"
+                className="block mb-2 text-sm font-medium text-gray-900 "
+              >
+                Your name
+              </label>
+              <input
+                type="text"
+                id="name"
+                className="shadow-sm  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                placeholder="Your name"
+                onChange={(e) => window.location.reload()}
                 required
               />
             </div>
