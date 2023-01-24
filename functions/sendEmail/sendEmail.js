@@ -3,6 +3,7 @@ const express = require("express");
 const serverless = require("serverless-http");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const request = require("request");
 
 const app = express();
 app.use(cors());
@@ -13,10 +14,11 @@ app.use(express.json());
 const router = express.Router();
 
 router.post("/", (req, res) => {
-  const { emailVal, messageVal, token } = req.body;
-  // console.log(req.apiGateway.event.body.token);
-  console.log(req.body);
+  const emailVal = req.body.email;
+  const messageVal = req.body.message;
+  const token = req.body.token;
   const secretKey = process.env.RECAPTCHA_SECRETKEY;
+  // const secretKey = "6Lcb0SEkAAAAAJvcavviM9Uyq4i0OrzIJuqHNdEG";
   const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`;
 
   if (!token) {
@@ -42,6 +44,7 @@ router.post("/", (req, res) => {
     }
     // When no problems occur, "send" the form
     res.status(200).send({ emailVal, messageVal, token, secretKey });
+    // res.status(200).send();
   });
 });
 
