@@ -29,6 +29,7 @@ const Contact = () => {
     };
     axios
       .post("https://www.sayantanmondal.com/.netlify/functions/sendEmail", data)
+      // .post("http://localhost:57868/.netlify/functions/sendEmail", data)
       .then(() => {
         console.log("Message Sent");
       });
