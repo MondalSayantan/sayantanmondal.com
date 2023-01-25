@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         //grey
         "theme-grey": "rgb(71, 69, 69)",
+        "theme-blue": "#5959df",
       },
     },
   },

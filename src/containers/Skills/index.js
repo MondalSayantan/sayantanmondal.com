@@ -13,8 +13,8 @@ const Skills = () => {
     >
       <div className=" flex p-10 w-full justify-around">
         <div class="flex flex-col items-center lg:bg-white bg-purple-50 border lg:rounded-lg lg:shadow-md justify-between m-5 max-w-1xl hover:shadow-xl transition duration-500 ease-in-out ">
-          <div class="flex flex-col justify-around p-4 leading-normal h-3/4 my-auto">
-            <p className="font-bold text-blue-700 text-5xl text-center">
+          <div class="flex flex-col justify-around p-4 leading-normal h-3/5 my-auto">
+            <p className="mb-3 font-bold text-theme-blue text-2xl md:text-3xl lg:text-5xl text-center">
               About Me
             </p>
             <div className="flex items-center flex-col justify-around">
