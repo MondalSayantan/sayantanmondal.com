@@ -64,7 +64,7 @@ async function email(emailVal, messageVal, subject) {
     to: "sayantan@sayantanmondal.com", // list of receivers
     subject: `Contact From Website - ${subject} from ${emailVal}`, // Subject line
     text: `${messageVal}`, // plain text body
-    html: `${messageVal}`, // html body
+    html: `<p>Email : ${emailVal}</p><p>Subject: ${subject}</p><p>Message: ${messageVal}</p>`, // html body
   });
 }
 

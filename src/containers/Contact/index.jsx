@@ -3,22 +3,43 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import "./Contact.scss";
 import axios from "axios";
+import { useSnackbar } from "notistack";
+import validator from "validator";
 
 const Contact = () => {
   const style = {
     display: "none",
   };
 
+  const { enqueueSnackbar } = useSnackbar();
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
+  const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const { executeRecaptcha } = useGoogleReCaptcha();
   const [token, setToken] = useState("");
 
   const handleSubmit = async (e) => {
+    setLoading(true);
     e.preventDefault();
+    if (!email || !subject || !message) {
+      enqueueSnackbar("Please fill all the fields", { variant: "warning" });
+      setLoading(false);
+      return;
+    }
+    if (validator.isEmail(email) === false) {
+      enqueueSnackbar("Please enter a valid email", { variant: "warning" });
+      setLoading(false);
+      return;
+    }
+    if (name) {
+      enqueueSnackbar("Hello Bot!", { variant: "error" });
+      setLoading(false);
+      return;
+    }
     const result = await executeRecaptcha("homepage");
     setToken(result);
     const data = {
@@ -27,30 +48,32 @@ const Contact = () => {
       message,
       token: result,
     };
-    axios
-      .post("https://www.sayantanmondal.com/.netlify/functions/sendEmail", data)
-      // .post("http://localhost:57868/.netlify/functions/sendEmail", data)
-      .then(() => {
-        console.log("Message Sent");
-      });
+    try {
+      const res = await axios.post(
+        "https://www.sayantanmondal.com/.netlify/functions/sendEmail",
+        data
+      );
+      enqueueSnackbar("Message Sent Succesfully!", { variant: "success" });
+      setSent(true);
+    } catch (error) {
+      enqueueSnackbar("Could not message", { variant: "error" });
+    }
+    setLoading(false);
   };
 
   return (
     <>
-      <section className="bg-white">
+      <section className="text-white">
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">
+          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">
             Contact Me
           </h2>
-          <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-xl">
+          <p className="mb-8 lg:mb-16 font-light text-center text-gray-100 sm:text-xl">
             Get in touch with me and let's make something great happen!
           </p>
           <form action="#" className="space-y-8">
             <div>
-              <label
-                for="email"
-                className="block mb-2 text-sm font-medium text-gray-900"
-              >
+              <label for="email" className="block mb-2 text-sm font-medium">
                 Your email
               </label>
               <input
@@ -63,10 +86,7 @@ const Contact = () => {
               />
             </div>
             <div style={style}>
-              <label
-                for="name"
-                className="block mb-2 text-sm font-medium text-gray-900 "
-              >
+              <label for="name" className="block mb-2 text-sm font-medium ">
                 Your name
               </label>
               <input
@@ -79,10 +99,7 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label
-                for="subject"
-                className="block mb-2 text-sm font-medium text-gray-900"
-              >
+              <label for="subject" className="block mb-2 text-sm font-medium">
                 Subject
               </label>
               <input
@@ -95,10 +112,7 @@ const Contact = () => {
               />
             </div>
             <div className="sm:col-span-2">
-              <label
-                for="message"
-                className="block mb-2 text-sm font-medium text-gray-900"
-              >
+              <label for="message" className="block mb-2 text-sm font-medium">
                 Your message
               </label>
               <textarea
@@ -109,13 +123,29 @@ const Contact = () => {
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>
             </div>
-            <button
-              type="submit"
-              className="py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
-              onClick={handleSubmit}
-            >
-              Send message
-            </button>
+            <div className="flex justify-center items-center text-white font-bold text-1xl">
+              {sent ? (
+                <p className="">
+                  Yay! I have received your message. Have a great day!
+                </p>
+              ) : loading ? (
+                <button
+                  class="rounded-lg px-4 py-2 bg-green-700  opacity-50 cursor-not-allowed didsabled:cursor-not-allowed disabled:opacity-50"
+                  disabled
+                >
+                  Send Message
+                </button>
+              ) : (
+                <button
+                  type="submit"
+                  className="rounded-lg px-4 py-2 bg-green-700 hover:bg-green-800 duration-300"
+                  onClick={handleSubmit}
+                >
+                  Send Message
+                </button>
+              )}
+              {/* if loading display loading.. */}
+            </div>
           </form>
         </div>
       </section>
@@ -126,5 +156,5 @@ const Contact = () => {
 export default AppWrap(
   MotionWrap(Contact, "app__footer"),
   "contact",
-  "bg-white"
+  "bg-contact "
 );
