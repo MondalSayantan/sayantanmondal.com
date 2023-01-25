@@ -20,8 +20,8 @@ const Skills = () => {
             alt=""
           /> */}
           <div class="flex flex-col justify-between p-4 leading-normal">
-            <div className="flex items-center flex-col md:flex-row">
-              <h2 class="md:mb-2 lg:text-3xl py-1 m-0 font-bold tracking-tight text-gray-900 md:text-3xl text-1xl">
+            <div className="flex items-center flex-col lg:flex-row">
+              <h2 class="lg:mb-2 lg:text-3xl py-1 m-0 font-bold tracking-tight text-gray-900 md:text-3xl text-1xl">
                 I love
               </h2>
               <div className="hidden lg:block">
@@ -42,7 +42,7 @@ const Skills = () => {
                   cursor={true}
                   repeat={Infinity}
                   style={{
-                    fontSize: "1.7rem",
+                    fontSize: "1.8rem",
                     color: "#D946EF",
                     fontWeight: "bold",
                     marginLeft: "0.5rem",
@@ -69,7 +69,7 @@ const Skills = () => {
                   cursor={true}
                   repeat={Infinity}
                   style={{
-                    fontSize: "1.8rem",
+                    fontSize: "1.7rem",
                     color: "#D946EF",
                     fontWeight: "bold",
                     marginLeft: "0.5rem",
