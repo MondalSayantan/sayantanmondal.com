@@ -20,8 +20,8 @@ const Skills = () => {
             alt=""
           /> */}
           <div class="flex flex-col justify-between p-4 leading-normal">
-            <div className="flex items-center flex-col lg:flex-row">
-              <h2 class="lg:mb-2 lg:text-3xl py-1 m-0 font-bold tracking-tight text-gray-900 md:text-3xl text-1xl">
+            <div className="flex items-center flex-col">
+              <h2 class="lg:text-3xl py-1 m-0 font-bold tracking-tight text-gray-900 md:text-3xl text-1xl">
                 I love
               </h2>
               <div className="hidden lg:block">
