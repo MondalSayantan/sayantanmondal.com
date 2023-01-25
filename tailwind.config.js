@@ -6,7 +6,12 @@ module.exports = {
     "./src/containers/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        //grey
+        "theme-grey": "rgb(71, 69, 69)",
+      },
+    },
   },
   plugins: [],
 };

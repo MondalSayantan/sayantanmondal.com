@@ -69,8 +69,10 @@ const Header = () => {
         </div>
         <StaticImage
           src="../../assets/avatar.png"
+          // src="../../assets/wave-bit.png"
           alt="hero"
           className="h-40 w-40 md:h-80 md:w-80 rounded-lg rotate-6"
+          // className="h-40 w-40 md:h-80 md:w-80 rounded-lg"
         />
       </div>
     </header>

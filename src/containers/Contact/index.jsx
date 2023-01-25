@@ -5,6 +5,7 @@ import "./Contact.scss";
 import axios from "axios";
 import { useSnackbar } from "notistack";
 import validator from "validator";
+import { AiOutlineSend } from "react-icons/ai";
 
 const Contact = () => {
   const style = {
@@ -63,7 +64,7 @@ const Contact = () => {
 
   return (
     <>
-      <section className="text-white">
+      <section className="text-white" id="contact">
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">
             Contact Me
@@ -133,15 +134,21 @@ const Contact = () => {
                   class="rounded-lg px-4 py-2 bg-green-700  opacity-50 cursor-not-allowed didsabled:cursor-not-allowed disabled:opacity-50"
                   disabled
                 >
-                  Send Message
+                  <div className="flex items-center justify-between">
+                    Send Message &nbsp;&nbsp;
+                    <AiOutlineSend className="text-white" />
+                  </div>
                 </button>
               ) : (
                 <button
                   type="submit"
-                  className="rounded-lg px-4 py-2 bg-green-700 hover:bg-green-800 duration-300"
+                  className="rounded-lg px-4 py-2 bg-green-700 hover:bg-green-800 duration-300 flex "
                   onClick={handleSubmit}
                 >
-                  Send Message
+                  <div className="flex items-center justify-between">
+                    Send Message &nbsp;&nbsp;
+                    <AiOutlineSend className="text-white" />
+                  </div>
                 </button>
               )}
               {/* if loading display loading.. */}

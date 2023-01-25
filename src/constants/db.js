@@ -39,7 +39,7 @@ const projects = [
     tags: ["Personal Portfolio Projects"],
     technologies: "React, Node.Js, Express, MongoDB",
     image: images.xflix,
-    projectLink: "https://xflix-sayantan-v2.netlify.app/",
+    projectLink: "https://xflix-sayantan.netlify.app/",
   },
   {
     id: 5,

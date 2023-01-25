@@ -36,8 +36,8 @@ function Navbar() {
     { name: "about me", link: "#about", id: 2 },
     { name: "projects", link: "#work", id: 3 },
     { name: "work experience", link: "#experience", id: 5 },
-    { name: "contact", link: "/contact", id: 6 },
-    { name: "resume", link: "/resume", id: 4 },
+    { name: "contact", link: "#contact", id: 6 },
+    // { name: "resume", link: "/resume", id: 4 },
   ];
 
   // detect whether user has scrolled the page down by 10px

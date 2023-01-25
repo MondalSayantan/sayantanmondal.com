@@ -1,8 +1,14 @@
 import React from "react";
 import "./Layout.scss";
 import Navbar from "../Navbar";
-import { Header, Skills, Timeline, Projects, Contact } from "../../containers";
-import Carousel from "../Carousel";
+import {
+  Header,
+  Skills,
+  Timeline,
+  Projects,
+  Contact,
+  Footer,
+} from "../../containers";
 import { SnackbarProvider } from "notistack";
 
 const Layout = ({ children }) => {
@@ -22,7 +28,7 @@ const Layout = ({ children }) => {
         <Projects />
         <Timeline />
         <Contact />
-        {/* <Carousel /> */}
+        <Footer />
       </div>
     </SnackbarProvider>
   );

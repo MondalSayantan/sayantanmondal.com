@@ -12,15 +12,12 @@ const Skills = () => {
       id="about"
     >
       <div className=" flex p-10 w-full justify-around">
-        <div class="flex flex-col items-center lg:bg-white bg-purple-50 border lg:rounded-lg lg:shadow-md md:flex-row m-5 max-w-1xl hover:shadow-xl transition duration-500 ease-in-out ">
-          {/* small card on the left side */}
-          {/* <StaticImage
-            class="object-cover w-full rounded-t-lg h-100 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg grow"
-            src="../assets/skills.jpg"
-            alt=""
-          /> */}
-          <div class="flex flex-col justify-between p-4 leading-normal">
-            <div className="flex items-center flex-col">
+        <div class="flex flex-col items-center lg:bg-white bg-purple-50 border lg:rounded-lg lg:shadow-md justify-between m-5 max-w-1xl hover:shadow-xl transition duration-500 ease-in-out ">
+          <div class="flex flex-col justify-around p-4 leading-normal h-3/4 my-auto">
+            <p className="font-bold text-blue-700 text-5xl text-center">
+              About Me
+            </p>
+            <div className="flex items-center flex-col justify-around">
               <h2 class="lg:text-3xl py-1 m-0 font-bold tracking-tight text-gray-900 md:text-3xl text-1xl">
                 I love
               </h2>
@@ -105,17 +102,17 @@ const Skills = () => {
                   }}
                 />
               </div>
+              <p class="mb-3 lg:font-semibold text-black max-w-3xl md:text-base text-sm text-justify leading-tight">
+                I have a deep love for frontend and backend development, and I
+                am particularly skilled in using JavaScript to create fully
+                functional websites. I have completed a variety of projects for
+                my university and even worked on a prestigious government
+                project, which has only further ignited my passion for this
+                field. I am always eager to learn new technologies and
+                techniques, and I enjoy the challenge of creating innovative
+                solutions for complex problems.
+              </p>
             </div>
-            <p class="mb-3 lg:font-normal text-gray-900 max-w-3xl md:text-1xl text-sm text-justify">
-              I have a deep love for frontend and backend development, and I am
-              particularly skilled in using JavaScript to create fully
-              functional websites. I have completed a variety of projects for my
-              university and even worked on a prestigious government project,
-              which has only further ignited my passion for this field. I am
-              always eager to learn new technologies and techniques, and I enjoy
-              the challenge of creating innovative solutions for complex
-              problems.
-            </p>
           </div>
         </div>
       </div>
