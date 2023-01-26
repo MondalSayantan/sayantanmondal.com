@@ -1,13 +1,18 @@
 .bg {
   /* background-image: url("../../assets/skills-bg-2.jpg"); */
-  /* background-image: url("../../assets/background.jpg"); */
+
+  background-size: 50%;
+  background-color: rgb(71, 69, 69);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  /* background-size: 100% 100%; */
+  transform: skew(0deg, 5deg);
+
   background-position: center;
   /* background-attachment: fixed; */
+}
 
-  /* height: 100vw; */
-  /* width: 100vw; */
+.bg > * {
+  transform: skew(0deg, -5deg);
 }
 
 @media (max-width: 768px) {

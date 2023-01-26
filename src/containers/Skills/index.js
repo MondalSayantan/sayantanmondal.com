@@ -3,15 +3,16 @@ import { TypeAnimation } from "react-type-animation";
 import { StaticImage } from "gatsby-plugin-image";
 import SkillsIcons from "./skillsIcons";
 import * as styles from "./Skills.module.css";
+import SkillBox from "../../components/SkillBox";
 import { AppWrap, MotionWrap } from "../../wrapper";
 
 const Skills = () => {
   return (
     <div
-      className={`${styles.bg} flex flex-col h-screen w-screen shadow-md md:flex-row  hover:shadow-xl transition duration-500 `}
+      className={`${styles.bg} flex flex-col  w-screen  lg:flex-col   `}
       id="about"
     >
-      <div className=" flex p-10 w-full justify-around">
+      <div className=" flex lg:p-10 w-full justify-around">
         <div class="flex flex-col items-center lg:bg-white bg-purple-50 border lg:rounded-lg lg:shadow-md justify-between m-5 max-w-1xl hover:shadow-xl transition duration-500 ease-in-out ">
           <div class="flex flex-col justify-around p-4 leading-normal h-3/5 my-auto">
             <p className="mb-3 font-bold text-theme-blue text-2xl md:text-3xl lg:text-5xl text-center">
@@ -116,8 +117,9 @@ const Skills = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-4xl mx-auto flex justify-center items-center">
-        <SkillsIcons />
+      <div className="w-screen mx-auto flex justify-center items-center">
+        {/* <SkillsIcons /> */}
+        <SkillBox />
       </div>
     </div>
   );

@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:200");
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  #box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 18rem;
+    color: white;
+    font-family: "Raleway";
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .gradient-border {
+    --borderWidth: 3px;
+    background: black;
+    position: relative;
+    border-radius: var(--borderWidth);
+  }
+
+  .gradient-border > p {
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  #box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 18rem;
+    color: white;
+    font-family: "Raleway";
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .gradient-border {
+    --borderWidth: 3px;
+    background: black;
+    position: relative;
+    border-radius: var(--borderWidth);
+  }
+
+  .gradient-border > p {
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+#box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18rem;
+  height: 15rem;
+  color: white;
+  font-family: "Raleway";
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.gradient-border {
+  --borderWidth: 3px;
+  background: black;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+
+.gradient-border > p {
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.gradient-border:after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 1.5s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
