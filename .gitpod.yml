@@ -1,0 +1,6 @@
+tasks:
+  - before: nvm install 19.8.1 && nvm alias default 19.8.1 && npm install -g gatsby-cli
+    init: npm install 
+    command: gatsby develop
+
+
