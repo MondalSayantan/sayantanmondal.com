@@ -32,12 +32,11 @@ function Navbar() {
   const [open, cycleOpen] = useCycle(false, true);
 
   const links = [
-    { name: "home", link: "/", id: 1 },
-    { name: "about me", link: "#about", id: 2 },
-    { name: "projects", link: "#work", id: 3 },
-    { name: "work experience", link: "#experience", id: 5 },
-    { name: "contact", link: "#contact", id: 6 },
-    // { name: "resume", link: "/resume", id: 4 },
+    { name: "Home", link: "/", id: 1 },
+    { name: "About Me", link: "#about", id: 2 },
+    { name: "Projects", link: "#work", id: 3 },
+    { name: "Work Experience", link: "#experience", id: 5 },
+    { name: "Contact", link: "#contact", id: 6 },
   ];
 
   // detect whether user has scrolled the page down by 10px
@@ -51,9 +50,8 @@ function Navbar() {
 
   return (
     <header
-      className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${
-        !top && "bg-white backdrop-blur-sm shadow-lg"
-      }`}
+      className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${!top && "bg-white backdrop-blur-sm shadow-lg"
+        }`}
     >
       <AnimatePresence>
         {open && (
@@ -86,6 +84,23 @@ function Navbar() {
                   {name}
                 </motion.a>
               ))}
+              <motion.a
+                // key={id}
+                // href={to}
+                whileHover={{ scale: 1.1 }}
+                variants={itemVariants}
+                className="text-2xl font-bold text-gray-800 mb-10"
+              >
+                <a
+                  href="https://devcentral.club/"
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
+                  <button className="bg-blue-700 hover:bg-blue-900 text-white py-1 px-2 rounded-lg ml-2">
+                    Blog
+                  </button>
+                </a>
+              </motion.a>
             </motion.div>
           </motion.aside>
         )}
@@ -136,7 +151,7 @@ function Navbar() {
                   rel="noreferrer"
                 >
                   <button className="bg-blue-700 hover:bg-blue-900 text-white py-1 px-2 rounded-lg ml-2">
-                    blog
+                    Blog
                   </button>
                 </a>
               </li>

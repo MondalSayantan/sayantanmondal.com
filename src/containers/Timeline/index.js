@@ -58,13 +58,14 @@ const Timeline = () => {
                     <div className="order-1 w-5/12 px-1 py-4 text-right">
                       <p className="mb-3 text-base text-purple-800">2022</p>
                       <h4 className="mb-3 font-bold text-lg md:text-2xl">
-                        Freelance Projects
+                        Freelance and Open Source
                       </h4>
                       <p className="text-sm md:text-base leading-snug text-abc text-black-50 text-opacity-100">
                         Completed a number of freelance projects, the most
                         notable being the convocation portal for 9th convocation
                         of Manipal University Jaipur and DAK Management System
-                        for the Government of Rajasthan (Jaipur Collectorate)
+                        for the Government of Rajasthan (Jaipur Collectorate).
+                        Making significant contributions to open source, specifically to <b>Jenkins Infra.</b>
                       </p>
                     </div>
                   </div>
@@ -158,7 +159,7 @@ const Timeline = () => {
                   <div class="flex-1 ml-4 z-10 font-medium">
                     <div class="order-1 space-y-2 bg-theme-blue rounded-lg shadow-only transition-ease lg:w-5/12 px-6 py-4">
                       <h3 class="mb-3 font-bold text-white text-2xl">
-                        Freelance Projects
+                        Freelance and Open Source
                       </h3>
                       <p class="pb-4 text-sm text-white">2022</p>
                       <hr />
@@ -166,7 +167,8 @@ const Timeline = () => {
                         Completed a number of freelance projects, the most
                         notable being the convocation portal for 9th convocation
                         of Manipal University Jaipur and DAK Management System
-                        for the Government of Rajasthan (Jaipur Collectorate)
+                        for the Government of Rajasthan (Jaipur Collectorate).
+                        Making significant contributions to open source, specifically to <b>Jenkins Infra.</b>
                       </p>
                     </div>
                   </div>
