@@ -53,11 +53,11 @@ const Header = () => {
               about using my skills to create intuitive, user-friendly websites
               and applications that make people's lives easier.
             </p> */}
-            <p className="text-xl text-justify font-semibold text-gray-900">
+            <p className="text-xl font-semibold text-gray-900 mt-5">
               Full-Stack Developer and Aspiring Software Engineer
             </p>
           </div>
-          <div className="flex">
+          <div className="flex justify-center items-center lg:justify-start lg:items-start">
             {socials.map(({ name, link, id, icon }) => (
               <div key={id} className="my-10 mr-5">
                 <a href={link} target="_blank">
