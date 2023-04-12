@@ -10,6 +10,7 @@ import {
   Footer,
 } from "../../containers";
 import { SnackbarProvider } from "notistack";
+import SocialsWrapper from "../SocialsWrapper";
 
 const Layout = ({ children }) => {
   return (
@@ -22,6 +23,7 @@ const Layout = ({ children }) => {
       preventDuplicate
     >
       <div>
+      <SocialsWrapper />
         <Navbar />
         <Header />
         <Skills />

@@ -9,7 +9,7 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 const Skills = () => {
   return (
     <div
-      className={`${styles.bg} flex flex-col  w-screen  lg:flex-col   `}
+      className={` flex flex-col  w-screen  lg:flex-col   `}
       id="about"
     >
       <div className=" flex lg:p-10 w-full justify-around">

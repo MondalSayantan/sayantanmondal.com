@@ -6,6 +6,7 @@ import axios from "axios";
 import { useSnackbar } from "notistack";
 import validator from "validator";
 import { AiOutlineSend } from "react-icons/ai";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Contact = () => {
   const style = {
@@ -73,6 +74,9 @@ const Contact = () => {
             Get in touch with me and let's make something great happen!
           </p>
           <form action="#" className="space-y-8">
+          <div>
+              <StaticImage src="../../assets/contact.png" />
+          </div>
             <div>
               <label for="email" className="block mb-2 text-sm font-medium">
                 Your email
