@@ -1,0 +1,34 @@
+@keyframes fill-button {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.resume-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #38a169, #38a169);
+  transform: translateX(-100%);
+  transition: transform 0.4s;
+}
+
+.resume-btn:hover::before {
+  transform: translateX(0);
+  animation: fill-button 0.4s linear;
+}
+
+.resume-btn:hover .hover-text-white {
+  color: white;
+}

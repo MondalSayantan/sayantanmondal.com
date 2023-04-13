@@ -1,6 +1,7 @@
 import React from "react";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { StaticImage } from "gatsby-plugin-image";
+// import './Timeline.css'
 
 const Timeline = () => {
   const rightStyle = {
@@ -17,17 +18,17 @@ const Timeline = () => {
 
   return (
     <section id="experience">
-      <div className="hidden md:block">
-        <div className="bg-white rounded-lg text-black py-8">
+      <div className="hidden lg:block">
+        <div className="bg-gradient-custom rounded-lg text-black py-8">
           <div className="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
-            <div className="flex flex-col w-full justify-center items-center sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8">
-              <p className="ml-2 text-purple-800 uppercase tracking-loose">
+            <div className="flex flex-col w-full justify-center items-center sticky md:top-36 lg:w-1/4 mt-2 md:mt-12 pl-8">
+              <p className="ml-2 text-white uppercase tracking-loose">
                 My Journey so far...
               </p>
-              <p className="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">
+              <p className="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2 text-white">
                 Work Experience
               </p>
-              <p className="text-sm md:text-base text-abc text-black-50 mb-4">
+              <p className="text-sm md:text-base text-black-50 mb-4 text-gray-300">
                 The excitement of developing a product from scratch and seeing
                 it used by thousands of people never lets me settle down. I am
                 driven to constantly improve and innovate, pushing the
@@ -35,14 +36,16 @@ const Timeline = () => {
                 of knowing my contributions have a real impact on people's lives
                 is truly fulfilling
               </p>
-              {/* <a
-              href="#"
-              className="bg-transparent mr-auto hover:bg-yellow-300 text-purple-800 hover:text-wblack rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent"
-            >
-              Explore Now
-            </a> */}
+              <a
+                href="https://drive.google.com/file/d/1yfQCRlpeuuBO_wUzRNsdsu2zFp7cO7ee/view?usp=sharing"
+                target="_blank"
+                className="resume-btn bg-transparent mr-auto text-white rounded shadow py-2 px-4 border border-yellow-300 items-center relative"
+              >
+                <span className="hover-text-white">Resume</span>
+              </a>
+
             </div>
-            <div className="ml-0 md:ml-12 lg:w-2/3 sticky">
+            <div className="ml-0 xl:ml-12 lg:w-2/3 sticky">
               <div className="container mx-auto w-full h-full">
                 <div className="relative wrap overflow-hidden md:p-10 h-full text-justify p-1">
                   <div
@@ -56,11 +59,11 @@ const Timeline = () => {
                   <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                     <div className="order-1 w-5/12"></div>
                     <div className="order-1 w-5/12 px-1 py-4 text-right">
-                      <p className="mb-3 text-base text-purple-800">2022</p>
-                      <h4 className="mb-3 font-bold text-lg md:text-2xl">
+                      <p className="mb-3 text-base text-white">2022</p>
+                      <h4 className="mb-3 font-bold text-lg md:text-2xl text-white">
                         Freelance and Open Source
                       </h4>
-                      <p className="text-sm md:text-base leading-snug text-abc text-black-50 text-opacity-100">
+                      <p className="text-sm md:text-base leading-snug text-abc text-black-50 text-opacity-100 text-gray-300">
                         Completed a number of freelance projects, the most
                         notable being the convocation portal for 9th convocation
                         of Manipal University Jaipur and DAK Management System
@@ -72,14 +75,14 @@ const Timeline = () => {
                   <div className="mb-8 flex justify-between items-center w-full right-timeline">
                     <div className="order-1 w-5/12"></div>
                     <div className="order-1  w-5/12 px-1 py-4 text-left">
-                      <p className="mb-3 text-base text-purple-800">
+                      <p className="mb-3 text-base text-white">
                         April 2022 - October 2022
                       </p>
-                      <h4 className="mb-3 font-bold text-lg md:text-2xl">
+                      <h4 className="mb-3 font-bold text-lg md:text-2xl text-white">
                         Developer @ Juice
                       </h4>
-                      <p className="text-sm md:text-base leading-snug text-black-50 text-abc text-opacity-100">
-                        I was a part of an early-stage startup where we aimed to
+                      <p className="text-sm md:text-base leading-snug text-black-50 text-abc text-opacity-100 text-gray-300">
+                        I was a part of an early-stage startups where we aimed to
                         address the issue of mental health through a mobile app.
                         I played a key role in the development process, working
                         to bring the application to life
@@ -89,14 +92,14 @@ const Timeline = () => {
                   <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                     <div className="order-1 w-5/12"></div>
                     <div className="order-1 w-5/12 px-1 py-4 text-right">
-                      <p className="mb-3 text-base text-purple-800">
+                      <p className="mb-3 text-base text-white">
                         {" "}
                         June 2022 - July 2022
                       </p>
-                      <h4 className="mb-3 font-bold text-lg md:text-2xl">
+                      <h4 className="mb-3 font-bold text-lg md:text-2xl text-white">
                         Celebal Summer Intern
                       </h4>
-                      <p className="text-sm md:text-base leading-snug text-black-50 text-opacity-100 text-abc">
+                      <p className="text-sm md:text-base leading-snug text-black-50 text-opacity-100 text-gray-300">
                         During my tenure as a celebrity summer intern, I had the
                         opportunity to develop REST APIs for a student database
                         management system. I also attended several seminars and
@@ -110,13 +113,13 @@ const Timeline = () => {
                     <div className="order-1 w-5/12"></div>
 
                     <div className="order-1  w-5/12 px-1 py-4">
-                      <p className="mb-3 text-base text-purple-800">
+                      <p className="mb-3 text-base text-white">
                         June 2021 - January 2022
                       </p>
-                      <h4 className="mb-3 font-bold  text-lg md:text-2xl text-left">
+                      <h4 className="mb-3 font-bold  text-lg md:text-2xl text-left text-white">
                         Full Stack Development Track @ Crio.Do
                       </h4>
-                      <p className="text-sm md:text-base leading-snug text-abc text-black-50 text-opacity-100">
+                      <p className="text-sm md:text-base leading-snug text-abc text-black-50 text-opacity-100 text-gray-300">
                         Completed the full stack development track at Crio.Do,
                         which launched me into my career as a developer. The
                         hands-on experience and mentorship provided have been
@@ -130,7 +133,7 @@ const Timeline = () => {
           </div>
         </div>
       </div>
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         <div className="py-10 container flex flex-col justify-center items-center bg-white rounded-lg mx-auto px-5">
           <p className="mb-3 font-bold text-theme-blue text-2xl">
             Work Experience
