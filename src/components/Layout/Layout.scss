@@ -29,6 +29,11 @@ body::-webkit-scrollbar-thumb {
   // outline: 1px solid slategrey;
 }
 
+  .bg-gradient-custom {
+    background-image: linear-gradient(to right, #000000, #130F40);
+  }
+
+
 * {
   box-sizing: border-box;
   padding: 0;
