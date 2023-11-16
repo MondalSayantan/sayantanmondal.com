@@ -32,7 +32,7 @@
     "gatsby-plugin-react-helmet": "^6.3.0",
     "gatsby-plugin-sass": "^6.4.0",
     "gatsby-plugin-sentry": "^1.0.1",
-    "gatsby-plugin-sharp": "^5.8.1",
+    "gatsby-plugin-sharp": "^5.12.3",
     "gatsby-source-filesystem": "^5.2.0",
     "netlify-lambda": "^2.0.15",
     "nodemailer": "^6.9.0",
